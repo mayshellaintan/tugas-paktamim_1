@@ -1,0 +1,148 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe9b9;
+} 
+
+header {
+	margin:auto;
+	text-align: center;
+	width: 100%;
+	font-family: arial;
+} 
+
+header img {
+  position: relative;
+  top: 10px; 
+  bottom: 30px;
+  height: 100%;
+  width: 100%;
+}
+  
+.bijak {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.garis1 {
+  border: none;
+  border-top: 3px solid black;
+  width: 50%;
+  margin: 100px auto;
+}
+
+.penting {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.garis2 {
+  border: none;
+  border-top: 3px solid black;
+  width: 50%;
+  margin: 100px auto;
+}
+
+
+.gambar {
+  text-align: center;
+}
+
+
+.garis3 {
+  border: none;
+  border-top: 3px solid black;
+  width: 50%;
+  margin: 100px auto;
+}
+
+.dampak {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dampak p {
+  text-align: left;
+  margin-left: 29%;
+  font-family:Arial, Helvetica, sans-serif ;
+}
+
+.garis4 {
+  border: none;
+  border-top: 3px solid black;
+  width: 50%;
+  margin: 100px auto;
+}
+
+.cara {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cara p {
+  text-align: left;
+  margin-left: 29%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.persusif {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.persuasif p {
+  text-align: center;
+  
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  
+}
+
+/* Reset dasar */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer container */
+.quote-footer {
+  width: 100%;
+  margin-top: 10%;
+}
+
+/* Bagian kutipan */
+.quote-section {
+  background-color: #d9c8a0; /* warna cream/beige */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.quote-text {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+/* Bagian nama penulis */
+.author-section {
+  background-color: #5c6775; /* abu kebiruan */
+  padding: 20px;
+  text-align: center;
+}
+
+.author-text {
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
