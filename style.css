@@ -1,151 +1,244 @@
-body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffe9b9;
-} 
+ /* Reset & Umum */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-header {
-	margin:auto;
-	text-align: center;
-	width: 100%;
-	font-family: arial;
-} 
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
 
-header img {
-  position: relative;
-  top: 10px; 
-  bottom: 30px;
-  height: 100%;
-  width: 100%;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar ul li {
+            margin-left: 1.5rem;
+        }
+
+        .navbar ul li a {
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #3498db;
+        }
+
+        /* Carousel */
+        .carousel {
+          width: 100%;
+            height: 50vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .carousel h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .carousel p {
+            font-size: 1.2rem;
+            max-width: 700px;
+        }
+
+        /* Konten Penting */
+        .highlight {
+            padding: 4rem 5%;
+            background-color: #fff;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+        }
+
+        .highlight h2 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+        }
+
+        /* Poster Section */
+        .posters {
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .posters h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 3rem;
+        }
+
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .poster-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .poster-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .poster-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .poster-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        /* Dampak */
+        .section {
+            padding: 4rem 5%;
+            background-color: #fff;
+            border-bottom: 2px solid #eee;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+        }
+
+        .section-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        .section-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 5%;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        .social-icons {
+            margin-top: 1rem;
+        }
+
+        .social-icons a {
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #3498db;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .navbar ul {
+                margin-top: 1rem;
+            }
+
+            .navbar ul li {
+                margin: 0 0.8rem;
+            }
+
+            .carousel h1 {
+                font-size: 2rem;
+            }
+
+            .carousel p {
+                font-size: 1rem;
+            }
+
+            .highlight h2, .section h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        header {
+    width: 100%; /* Lebar header sesuai lebar viewport */
+    text-align: center; /* Menengahkan konten di dalam header */
+    padding: 0; /* Menghilangkan padding default */
+    margin: 0; /* Menghilangkan margin default */
 }
-  
-.bijak {
-  text-align: center;
-  margin-top: 10%;
-  font-family: Arial, Helvetica, sans-serif;
+
+.header-content {
+    width: 100%; /* Pastikan div mengisi lebar header */
+    overflow: hidden; /* Jika gambar sedikit lebih besar, ini membantu */
 }
 
-.container {
-  text-align: center;
-  margin-top: 5%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.garis1 {
-  border: none;
-  border-top: 3px solid black;
-  width: 50%;
-  margin: 100px auto;
-}
-
-.penting {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.garis2 {
-  border: none;
-  border-top: 3px solid black;
-  width: 50%;
-  margin: 100px auto;
-}
-
-
-.gambar {
-  text-align: center;
-}
-
-
-.garis3 {
-  border: none;
-  border-top: 3px solid black;
-  width: 50%;
-  margin: 100px auto;
-}
-
-.dampak {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.dampak p {
-  text-align: left;
-  margin-left: 29%;
-  font-family:Arial, Helvetica, sans-serif ;
-}
-
-.garis4 {
-  border: none;
-  border-top: 3px solid black;
-  width: 50%;
-  margin: 100px auto;
-}
-
-.cara {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.cara p {
-  text-align: left;
-  margin-left: 29%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.persusif {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.persuasif p {
-  text-align: center;
-  margin-right: 30%;
-  margin-top: 5%;
-
-  font-family: Arial, Helvetica, sans-serif;
-  
-}
-
-/* Reset dasar */
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
-/* Footer container */
-.quote-footer {
-  width: 100%;
-  margin-top: 5%;
-}
-
-/* Bagian kutipan */
-.quote-section {
-  background-color: #d9c8a0; /* warna cream/beige */
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.quote-text {
-  font-weight: bold;
-  font-size: 16px;
-  color: #000000;
-  line-height: 1.5;
-}
-
-/* Bagian nama penulis */
-.author-section {
-  background-color: #5c6775; /* abu kebiruan */
-  padding: 20px;
-  text-align: center;
-}
-
-.author-text {
-  font-size: 12px;
-  color: #ffffff;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.header-content img {
+    width: 100%; /* Mengatur lebar gambar agar mengisi seluruh lebar div */
+    height: auto; /* Menjaga proporsi gambar */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
 }
